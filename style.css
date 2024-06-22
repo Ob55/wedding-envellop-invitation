@@ -1,12 +1,12 @@
 :root{
   --primary: #fff;
-  --bg-color: rgb(5, 53, 61);
-  --bg-envelope-color: #f5edd1;
-  --envelope-tab: #ecdeb8;
-  --envelope-cover: #e6cfa7;
+  --bg-color: url('congratulations.gif');
+  --bg-envelope-color: #2b281d;
+  --envelope-tab: #FFEED4;
+  --envelope-cover:#654321;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --txt-color: #444;
-  --heart-color: rgb(252, 8, 231);
+  --heart-color: rgb(252, 8, 24);
 }
 body{
   margin: 0;
@@ -67,10 +67,11 @@ body{
 }
 
 .envelope > .letter > .text {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: var(--txt-color);
+  font-family: 'Lucida Calligraphy', 'Lucida Handwriting', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-style: italic;
+    color: var(--txt-color);
   text-align: left;
-  font-size: 10px;
+  font-size: 8px;
 }
 .heart {
   position: absolute;
