@@ -1,6 +1,6 @@
 :root {
   --primary: #fff;
-  --bg-color: url('/layout6.jpeg');
+  --bg-color: url('./layout6.jpeg');
   --bg-envelope-color: #2b281d;
   --envelope-tab: #c3fdf2;
   --envelope-cover: #93b3a9;
