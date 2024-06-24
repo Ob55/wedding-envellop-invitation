@@ -1,36 +1,57 @@
-:root{
+:root {
   --primary: #fff;
-  --bg-color: url('congratulations.gif');
+  --bg-color: url('/layout6.jpeg');
   --bg-envelope-color: #2b281d;
-  --envelope-tab: #FFEED4;
-  --envelope-cover:#654321;
+  --envelope-tab: #c3fdf2;
+  --envelope-cover: #93b3a9;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --txt-color: #444;
   --heart-color: rgb(252, 8, 24);
+  --bg-size: cover;
+  --heading-color: #ff6347; /* Add this variable for heading color */
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background: var(--bg-color);
+  background-size: var(--bg-size);
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.container {
   height: 100vh;
+}
+
+.heading h1 {
+  color: var(--heading-color); /* Add this rule to change the heading color */
+}
+
+.outer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
   display: grid;
   place-items: center;
 }
+
 .container > .envelope-wrapper {
   background: var(--bg-envelope-color);
   box-shadow: 0 0 40px var(--shadow-color);
 }
+
 .envelope-wrapper > .envelope {
   position: relative;
   width: 300px;
   height: 230px;
 }
+
 .envelope-wrapper > .envelope::before {
   content: "";
   position: absolute;
@@ -42,6 +63,7 @@ body{
   transform-origin: top;
   transition: all 0.5s ease-in-out 0.7s;
 }
+
 .envelope-wrapper > .envelope::after {
   content: "";
   position: absolute;
@@ -53,6 +75,7 @@ body{
   border-bottom: 100px solid var(--envelope-cover);
   border-left: 150px solid var(--envelope-cover);
 }
+
 .envelope > .letter {
   position: absolute;
   right: 20%;
@@ -69,47 +92,23 @@ body{
 .envelope > .letter > .text {
   font-family: 'Lucida Calligraphy', 'Lucida Handwriting', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
   font-style: italic;
-    color: var(--txt-color);
+  color: var(--txt-color);
   text-align: left;
   font-size: 8px;
 }
-.heart {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 15px;
-  height: 15px;
-  background: var(--heart-color);
-  z-index: 4;
-  transform: translate(-50%, -20%) rotate(45deg);
-  transition: transform 0.5s ease-in-out 1s;
-  box-shadow: 0 1px 6px var(--shadow-color);
-  cursor: pointer;
-}
-.heart:before, 
-.heart:after {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: var(--heart-color);
-  border-radius: 50%;
-}
-.heart:before {
-  top: -7.5px;
-}
-.heart:after {
-  right: 7.5px;
-}
+
+
 .flap > .envelope:before {
   transform: rotateX(180deg);
   z-index: 0;
 }
+
 .flap > .envelope > .letter {
   bottom: 100px;
   transform: scale(1.5);
   transition-delay: 1s;
 }
+
 .flap > .heart {
   transform: rotate(90deg);
   transition-delay: 0.4s;
