@@ -1,14 +1,14 @@
 :root {
-  --primary: #fff;
-  --bg-color: url('./layout6.jpeg');
-  --bg-envelope-color: #2b281d;
-  --envelope-tab: #c3fdf2;
-  --envelope-cover: #93b3a9;
+  --primary: #d8f8f6; /* Pastel mint */
+  --bg-color: url('./layout6.jpg');
+  --bg-envelope-color: #4b3621; /* Darker, rich brown for envelope background */
+  --envelope-tab: #f9e8d4; /* Warmer soft cream */
+  --envelope-cover: #f2a6b8; /* Soft rose pink */
   --shadow-color: rgba(0, 0, 0, 0.2);
-  --txt-color: #444;
+  --txt-color: #333; /* Darker text color for readability */
   --heart-color: rgb(252, 8, 24);
   --bg-size: cover;
-  --heading-color: #ff6347; /* Add this variable for heading color */
+  --heading-color: #ff4500; /* Slightly deeper, vibrant orange for heading */
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 }
 
 .heading h1 {
-  color: var(--heading-color); /* Add this rule to change the heading color */
+  color: var(--heading-color); /* Keep the bright heading color */
 }
 
 .outer-container {
@@ -42,7 +42,7 @@ body {
 }
 
 .container > .envelope-wrapper {
-  background: var(--bg-envelope-color);
+  background: var(--bg-envelope-color); /* Rich brown envelope background */
   box-shadow: 0 0 40px var(--shadow-color);
 }
 
@@ -57,7 +57,7 @@ body {
   position: absolute;
   top: 0;
   z-index: 2;
-  border-top: 130px solid var(--envelope-tab);
+  border-top: 130px solid var(--envelope-tab); /* Warm cream envelope tab */
   border-right: 150px solid transparent;
   border-left: 150px solid transparent;
   transform-origin: top;
@@ -71,7 +71,7 @@ body {
   width: 0px;
   height: 0px;
   border-top: 130px solid transparent;
-  border-right: 150px solid var(--envelope-cover);
+  border-right: 150px solid var(--envelope-cover); /* Light beige envelope cover */
   border-bottom: 100px solid var(--envelope-cover);
   border-left: 150px solid var(--envelope-cover);
 }
@@ -82,7 +82,7 @@ body {
   bottom: 0;
   width: 54%;
   height: 80%;
-  background: var(--primary);
+  background: var(--primary); /* White letter background */
   text-align: center;
   transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
@@ -92,11 +92,9 @@ body {
 .envelope > .letter > .text {
   font-family: 'Lucida Calligraphy', 'Lucida Handwriting', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
   font-style: italic;
-  color: var(--txt-color);
-  text-align: left;
+  color: var(--txt-color); /* Slightly darker text for contrast */
   font-size: 8px;
 }
-
 
 .flap > .envelope:before {
   transform: rotateX(180deg);
